@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maldives Chess Club - Student Progress Tool</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+    <div class="login-container">
+        <div class="login-box">
+            <div class="logo">
+                <h1>♟ Maldives Chess Club</h1>
+                <p>Student Progress Tracker</p>
+            </div>
+
+            <div class="login-tabs">
+                <button class="tab-btn active" data-tab="instructor">Instructor Login</button>
+                <button class="tab-btn" data-tab="student">Student/Parent Login</button>
+            </div>
+
+            <!-- Instructor Login Tab -->
+            <div class="tab-content active" id="instructor-tab">
+                <form id="instructor-login-form">
+                    <div class="form-group">
+                        <label for="instructor-username">Username</label>
+                        <input type="text" id="instructor-username" placeholder="Enter instructor username" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="instructor-password">Password</label>
+                        <input type="password" id="instructor-password" placeholder="Enter password" required>
+                    </div>
+                    <button type="submit" class="btn-login">Login as Instructor</button>
+                </form>
+                <p class="demo-creds"><strong>Demo:</strong> username: instructor | password: admin123</p>
+            </div>
+
+            <!-- Student/Parent Login Tab -->
+            <div class="tab-content" id="student-tab">
+                <form id="student-login-form">
+                    <div class="form-group">
+                        <label for="student-id">Student ID</label>
+                        <input type="text" id="student-id" placeholder="Enter your Student ID" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="student-password">Password</label>
+                        <input type="password" id="student-password" placeholder="Enter your password" required>
+                    </div>
+                    <button type="submit" class="btn-login">Login</button>
+                </form>
+                <p class="demo-creds"><strong>Demo:</strong> Student ID: STU001 | password: student123</p>
+            </div>
+
+            <div class="login-footer">
+                <p>&copy; 2024 Maldives Chess Club. All rights reserved.</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/storage.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
