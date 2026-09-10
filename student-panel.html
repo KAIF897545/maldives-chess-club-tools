@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Panel - Maldives Chess Club</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+    <!-- Header -->
+    <div class="header">
+        <div>
+            <h1>🎓 My Progress</h1>
+            <p style="color: #7f8c8d; margin-top: 5px;">Student Portal</p>
+        </div>
+        <div class="header-actions">
+            <button id="logout-btn" class="btn btn-danger">Logout</button>
+        </div>
+    </div>
+
+    <div class="student-container">
+        <!-- Student Info Header -->
+        <div class="student-header">
+            <h1 id="student-name-header">Student Name</h1>
+            <div style="display: flex; gap: 20px; margin-top: 15px; flex-wrap: wrap;">
+                <div>
+                    <span style="color: #7f8c8d; font-size: 12px;">Student ID</span>
+                    <div style="font-weight: 600; color: var(--primary-color);">ID: <span id="student-id-display">-</span></div>
+                </div>
+                <div>
+                    <span style="color: #7f8c8d; font-size: 12px;">Category Level</span>
+                    <div style="font-weight: 600; color: var(--primary-color);"><span id="student-category">-</span></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Progress Content -->
+        <div id="progress-content">
+            <!-- Progress will be populated here -->
+        </div>
+    </div>
+
+    <script src="js/storage.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/utils.js"></script>
+    <script src="js/student.js"></script>
+</body>
+</html>

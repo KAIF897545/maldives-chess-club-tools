@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instructor Panel - Maldives Chess Club</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+    <!-- Header -->
+    <div class="header">
+        <div>
+            <h1>🏫 Instructor Dashboard</h1>
+            <p style="color: #7f8c8d; margin-top: 5px;">Welcome, <span id="instructor-name">Instructor</span></p>
+        </div>
+        <div class="header-actions">
+            <button id="add-student-btn" class="btn btn-secondary">+ Add Student</button>
+            <button id="logout-btn" class="btn btn-danger">Logout</button>
+        </div>
+    </div>
+
+    <div class="instructor-container">
+        <div class="dashboard-grid">
+            <!-- Sidebar -->
+            <aside class="sidebar">
+                <h3>📁 Categories</h3>
+                <ul class="category-list" id="category-list">
+                    <!-- Categories will be populated here -->
+                </ul>
+            </aside>
+
+            <!-- Main Content -->
+            <main class="main-content">
+                <h2>Students Management</h2>
+                
+                <!-- Search and Filter -->
+                <div style="display: flex; gap: 10px; margin-bottom: 20px;">
+                    <input type="text" id="search-students" placeholder="Search by name or ID..." 
+                           style="flex: 1; padding: 10px; border: 1px solid var(--border-color); border-radius: 5px;">
+                    <select id="category-filter" style="padding: 10px; border: 1px solid var(--border-color); border-radius: 5px;">
+                        <option value="">All Categories</option>
+                    </select>
+                </div>
+
+                <!-- Students Grid -->
+                <div class="student-list" id="students-list">
+                    <!-- Students will be populated here -->
+                </div>
+            </main>
+        </div>
+    </div>
+
+    <!-- Progress Modal -->
+    <div class="modal" id="progress-modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2 id="progress-modal-title">Student Progress</h2>
+                <button class="modal-close" onclick="document.getElementById('progress-modal').classList.remove('active');">✕</button>
+            </div>
+            <div id="progress-modal-content">
+                <!-- Progress content will be populated here -->
+            </div>
+            <div class="modal-footer">
+                <button class="btn btn-secondary" onclick="document.getElementById('progress-modal').classList.remove('active');">Close</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/storage.js"></script>
+    <script src="js/auth.js"></script>
+    <script src="js/utils.js"></script>
+    <script src="js/instructor.js"></script>
+</body>
+</html>
